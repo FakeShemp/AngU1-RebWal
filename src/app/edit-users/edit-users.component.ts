@@ -1,3 +1,7 @@
+/*
+This component checks for button presses and adds or removes users from the list in 
+dashboard component. It also handles the functionality of the input field.
+*/
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
@@ -17,11 +21,13 @@ export class EditUsersComponent implements OnInit {
 
   @Input() name = '';
 
+  // Send name to dashboard userList and clear input field
   addUser(userName: string) {
     this.addUserEvent.emit(this.name);
     this.name = '';
   }
 
+  // Call the remove user method in dashboard
   removeUser() {
     this.removeUserEvent.emit();
   }

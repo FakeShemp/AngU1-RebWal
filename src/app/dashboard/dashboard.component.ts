@@ -1,3 +1,8 @@
+/*
+This is the dashboard that stores the user names in a list and acts as 
+a communicator and parent for the child components.
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -16,10 +21,12 @@ export class DashboardComponent implements OnInit {
 
   userList: string[];
 
+  // Add a user name in the first position of list
   getUser($event:string) {
     this.userList.unshift($event);
   }
 
+  // Remove the last user in list
   popUser() {
     this.userList.pop();
   }
