@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-list',
@@ -12,4 +12,10 @@ export class UserListComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Input() users: string[];
+  toggle = false;
+
+  toggleColor() {
+    this.toggle = !this.toggle;
+  }
 }

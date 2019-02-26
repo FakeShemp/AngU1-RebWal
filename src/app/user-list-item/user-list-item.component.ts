@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-list-item',
@@ -12,4 +12,15 @@ export class UserListItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Input() user: string;
+  @Input() textColor: boolean;
+
+  getStyle(): Object {
+    if (this.textColor) {
+      return { "color": "green" };
+    }
+    else {
+      return { "color": "pink" }
+    }
+  }
 }

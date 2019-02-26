@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { BoundText } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-edit-users',
@@ -12,4 +13,14 @@ export class EditUsersComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Output() addUserEvent = new EventEmitter<string>();
+  @Output() removeUserEvent = new EventEmitter<any>();
+
+  addUser(userName: string) {
+    this.addUserEvent.emit(userName);
+  }
+
+  removeUser() {
+    this.removeUserEvent.emit();
+  }
 }

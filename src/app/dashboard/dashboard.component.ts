@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    this.userList = ["Leanne Graham", "Ervin Howell", "Clementine Bauch", "Patricia Lebsack"]
+   }
 
   ngOnInit() {
   }
 
+  userList: string[];
+
+  getUser($event:string) {
+    this.userList.unshift($event);
+  }
+
+  popUser() {
+    this.userList.pop();
+  }
 }
