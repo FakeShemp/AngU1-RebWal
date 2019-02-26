@@ -17,7 +17,7 @@ export class UserListItemComponent implements OnInit {
 
   getStyle(): Object {
     if (this.textColor) {
-      return { "color": "green" };
+      return { "color": "lightgreen" };
     }
     else {
       return { "color": "pink" }

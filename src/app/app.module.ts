@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserListItemComponent } from './user-list-item/user-list-item.component';
 import { EditUsersComponent } from './edit-users/edit-users.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditUsersComponent } from './edit-users/edit-users.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

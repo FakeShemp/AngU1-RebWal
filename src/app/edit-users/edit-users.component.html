@@ -1,4 +1,4 @@
-<input #box (keyup.enter)="addUser(box.value)">
+<input #box [(ngModel)]="name" (keyup.enter)="addUser(box.value)">
 <br>
 <button (click)="addUser(box.value)">Add</button>
 <button (click)="removeUser()">Remove</button>
