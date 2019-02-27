@@ -17,12 +17,12 @@ export class EditUsersComponent implements OnInit {
   }
 
   @Output() addUserEvent = new EventEmitter<string>();
-  @Output() removeUserEvent = new EventEmitter<any>();
+  @Output() removeUserEvent = new EventEmitter<void>();
 
   @Input() name = '';
 
   // Send name to dashboard userList and clear input field
-  addUser(userName: string) {
+  addUser() {
     this.addUserEvent.emit(this.name);
     this.name = '';
   }
