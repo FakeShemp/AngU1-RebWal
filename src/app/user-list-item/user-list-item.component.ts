@@ -17,15 +17,10 @@ export class UserListItemComponent implements OnInit {
   }
 
   @Input() user: string;
-  @Input() textColor: boolean;
+  @Input() textColor: string;
 
-  // Returns a style object of different colors depending on bool input
+  // Returns a style object of different colors depending on input
   getStyle(): Object {
-    if (this.textColor) {
-      return { "color": "lightgreen" };
-    }
-    else {
-      return { "color": "pink" }
-    }
+    return { "color": this.textColor };
   }
 }

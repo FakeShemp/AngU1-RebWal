@@ -18,10 +18,20 @@ export class UserListComponent implements OnInit {
   }
 
   @Input() users: string[];
-  toggle = false;
+  toggle: boolean = false;
 
-  // Toggle a boolean to signal color changes in child
+  // Toggle a boolean to signal color changes
   toggleColor() {
     this.toggle = !this.toggle;
+  }
+
+  // Sends color value string to children
+  sendColor(): string {
+    if (this.toggle) {
+      return "pink";
+    }
+    else {
+      return "lightgreen";
+    }
   }
 }
